@@ -2,11 +2,18 @@
 body {
      font-family: Arial, Helvetica, sans-serif;
 }
+.main {
+     padding-bottom: 50px;
+}
+header {
+     padding: 0 20px;
+}
 .headerContainer {
      max-width: 1100px;
      margin: 40px auto;
 }
 .container {
+     padding: 0 20px;
      display: flex;
      max-width: 900px;
      margin: auto;
@@ -97,4 +104,31 @@ cursor: no-drop;
 }
 .container .rightSide .rightArrow:hover{
      opacity: .9;
+}
+
+@media (max-width: 770px) {
+     .container {
+          padding: 0 20px;
+          flex-direction: column;
+     }
+     .container .leftSide {
+          margin-right: 0;
+     }
+     .container .rightSide {
+          margin-left: 0;
+          margin-top: 50px;
+     }
+     .container .rightSide .rightArrow {
+          margin-left: 0;
+          margin-top: 0;
+          border-radius: 10px;
+          width: 60px;
+          height: 60px;
+     }
+}
+
+@media (max-width: 430px) {
+     .container .rightSide .grid {
+          grid-template-columns: 1fr;
+     } 
 }
